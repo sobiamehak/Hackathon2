@@ -62,7 +62,7 @@ const Products = () => {
           </div>
           {/* chair6 */}
           <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image6.svg" alt="" height={312} width={312} />
+            <Image src="/Image6.svg" alt="" height={312} width={312} />
             <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
               <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
             </h1>
