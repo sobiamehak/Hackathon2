@@ -1,10 +1,23 @@
 
 
 import React from 'react'
+import Link from 'next/link'
 import { AiOutlineExclamationCircle } from 'react-icons/ai'
 import Image from 'next/image'
 import { CiShoppingCart } from 'react-icons/ci'
 import { FiMenu } from 'react-icons/fi'
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
+
+
+
 
 const Header = () => {
   return (
@@ -22,9 +35,11 @@ const Header = () => {
         </div>
       </div>
 
+
       {/* Middle header */}
-      <div className="bg-[#F0F2F3] flex justify-between items-center px-4 py-4 sm:px-6 md:px-10">
-        <div className="flex items-center">
+    
+      <div className="bg-[#F0F2F3] flex  justify-between items-center px-4 py-4 sm:px-6 md:px-10">
+        <div className="flex  items-center">
           <Image src="/logo.svg" alt="logo" width={40} height={40} />
           <h1 className="text-lg sm:text-xl lg:text-2xl font-medium ml-2">Comforty</h1>
         </div>
@@ -35,20 +50,51 @@ const Header = () => {
             2
           </p>
         </div>
-        <FiMenu className="text-2xl lg:hidden" />
       </div>
+      <Sheet >
+  <SheetTrigger className="lg:hidden">
+    <div className='ml-[400px] '>
+  <FiMenu className="text-2xl lg:hidden " />
+  </div>
+    </SheetTrigger>
+  <SheetContent>
+    <SheetHeader >
+    <nav className=" flex flex-col  justify-start items-start" >
+    <ul>
+    <li><Link href="/" >Home</Link></li>
+          <br />
+          <li><Link href="/allproducts" >Shop</Link></li>
+          <br />
+          <li> <Link href="/product"> Product</Link>
+           </li>
+           <br />
+          <li><Link href="/contact">Contact</Link></li>
+          <br />
+          <li>About</li>
+        </ul>
+    </nav>
+    </SheetHeader>
+  </SheetContent>
+  <SheetTitle />
+  <SheetDescription />
+</Sheet>
+
 
       {/* Bottom header */}
-      <div className="bg-white flex flex-wrap justify-between items-center px-4 py-3 sm:px-6 md:px-10">
+      <div className="md:block hidden bg-white lg:flex flex-wrap justify-between items-center px-4 py-3 sm:px-6 md:px-10">
         <ul className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm lg:text-base">
           <li>Home</li>
-          <li>Shop</li>
-          <li>Product</li>
-          <li>Pages</li>
+          <li><Link href="/allproducts" >Shop</Link></li>
+          <li> <Link href="/product"> Product</Link>
+           </li>
+          <li><Link href="/contact">Contact</Link></li>
           <li>About</li>
         </ul>
         <h1 className="text-xs sm:text-sm lg:text-base">Contact: (808) 555-0111</h1>
       </div>
+  
+
+
     </div>
   )
 }

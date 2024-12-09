@@ -1,26 +1,43 @@
-
-
-
 import React from 'react'
 import Image from 'next/image'
 import { CiShoppingCart } from 'react-icons/ci'
 
-const Chairset = () => {
+const Page = () => {
   return (
-    <div className='w-full px-4 sm:px-8 md:px-12'>
-      {/* Logos Section */}
-      <div className="flex flex-wrap justify-between items-center mt-8">
-        <Image src="/Logo1.svg" alt="logo 1" width={100} height={90} />
-        <Image src="/Logo2.svg" alt="logo 2" width={107} height={109} />
-        <Image src="/Logo3.svg" alt="logo 3" width={135} height={139} />
-        <Image src="/logo4.svg" alt="logo 4" width={63} height={65} />
-        <Image src="/Logo5.svg" alt="logo 5" width={98} height={101} />
-        <Image src="/Logo6.svg" alt="logo 6" width={113} height={115} />
-        <Image src="/Logo7.svg" alt="logo 7" width={84} height={87}  />
-      </div>
+    <div>
 
-      {/* Card Section */}
-      <div className="mt-8 ">
+<div className='flex flex-col md:flex-row mx-4 md:mx-10 mt-10'>
+     
+      <div className='flex justify-center mb-8 md:mb-0'>
+        <div className='w-full md:w-[675px]'>
+          <Image src="Image2.svg" alt="img" width={675} height={607} className="w-full h-auto" />
+        </div>
+      </div>
+      
+      
+      <div className='flex flex-col md:ml-20 mt-8 md:mt-10'>
+        <h1 className='text-[#272343] font-extrabold text-3xl md:text-4xl leading-tight'>
+          Library Stool <br /> Chair
+        </h1>
+        <h2 className='bg-[#029FAE] text-white font-semibold text-lg 
+        w-[144px] h-[44px] md:text-xl rounded-full px-4 py-3 mt-3 mb-3'>
+          $20.00 USD
+        </h2>
+        <hr className="my-4" />
+        <p className='text-[#272343] opacity-75 text-sm md:text-base'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim. Lorem ipsum dolor sit amet, 
+          consectetur adipiscing.
+        </p>
+
+        <button className='flex items-center w-[200px] pl-4 h-[63px] bg-[#029FAE] font-semibold text-white rounded-md mt-4 text-xl'>
+          <CiShoppingCart className="text-3xl mr-2" />
+          Add To cart
+        </button>
+      </div>
+    </div>
+
+     {/* Card Section */}
+     <div className="mt-8 ">
         <h1 className="font-semibold text-[#272343] text-center sm:text-left">
           Featured Products
         </h1>
@@ -64,8 +81,10 @@ const Chairset = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Chairset;
+
+    </div>
+  )
+}
+
+export default Page
