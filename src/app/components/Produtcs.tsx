@@ -7,9 +7,9 @@ const Products = () => {
   return (
     <div>
       {/* Card section 1 */}
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 ">
         <h1 className="font-semibold text-[#272343] text-lg sm:text-xl lg:text-2xl md:pl-20 lg:pl-80">Featured Products</h1>
-        <div className="flex flex-wrap justify-start items-center w-full p-4 gap-4 lg:gap-6">
+        <div className="flex flex-col md:flex-row flex-wrap justify-start items-center w-full p-4 gap-4 lg:gap-6">
           {/* chair1 */}
           <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
             <Image src="/Image1.svg" alt="" height={312} width={312} />
@@ -22,9 +22,12 @@ const Products = () => {
           {/* chair2 */}
           <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
             <Image src="/Image2.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
+            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">Library Stool Chair
+              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded
+               bg-[#F0F2F3] text-black hover:bg-[#007580]" />
+               
             </h1>
+
             <h2 className="font-semibold pl-4">$20</h2>
           </div>
           {/* chair3 */}

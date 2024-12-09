@@ -13,18 +13,18 @@ const Chairset = () => {
         <Image src="/Logo1.svg" alt="logo 1" width={100} height={90} />
         <Image src="/Logo2.svg" alt="logo 2" width={107} height={109} />
         <Image src="/Logo3.svg" alt="logo 3" width={135} height={139} />
-        <Image src="/Logo4.svg" alt="logo 4" width={63} height={65} />
+        <Image src="/logo4.svg" alt="logo 4" width={63} height={65} />
         <Image src="/Logo5.svg" alt="logo 5" width={98} height={101} />
         <Image src="/Logo6.svg" alt="logo 6" width={113} height={115} />
-        <Image src="/Logo7.svg" alt="logo 7" width={84} height={87} />
+        <Image src="/Logo7.svg" alt="logo 7" width={84} height={87}  />
       </div>
 
       {/* Card Section */}
-      <div className="mt-8">
+      <div className="mt-8 ">
         <h1 className="font-semibold text-[#272343] text-center sm:text-left">
           Featured Products
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
           {/* Chair 1 */}
           <div className="h-[377px] w-full max-w-[312px] mx-auto">
             <Image src="/Image1.svg" alt="Library Stool Chair" height={312} width={312} />
