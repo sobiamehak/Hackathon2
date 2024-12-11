@@ -61,8 +61,8 @@ const Header = () => {
   <FiMenu className="text-2xl lg:hidden " />
   </div>  
     </SheetTrigger>
-  <SheetContent>
-    <SheetHeader >
+  <SheetContent className='bg-white'>
+    <SheetHeader  >
     <nav className=" flex flex-col  justify-start items-start" >
     <ul>
     <li><Link href="/" >Home</Link></li>
