@@ -35,27 +35,31 @@ const Header = () => {
         </div>
       </div>
 
-
-      {/* Middle header */}
+      {/* Middle header */} 
     
-      <div className="bg-[#F0F2F3] flex  justify-between items-center px-4 py-4 sm:px-6 md:px-10">
-        <div className="flex  items-center">
-          <Image src="/logo.svg" alt="logo" width={40} height={40} />
-          <h1 className="text-lg sm:text-xl lg:text-2xl font-medium ml-2">Comforty</h1>
-        </div>
-        <div className="hidden lg:flex items-center bg-white p-2 rounded shadow-sm">
-          <CiShoppingCart className="text-2xl" />
-          <h1 className="px-2">Cart</h1>
-          <p className="h-6 w-6 flex items-center justify-center bg-[#007580] text-white text-sm rounded-full">
-            2
-          </p>
-        </div>
-      </div>
-      <Sheet >
+      <div className="bg-[#F0F2F3] lg:block flex items-center  px-4 py-4 sm:px-6 md:px-10">
+       
+      <div className='flex  justify-between items-center'>
+
+<div className="flex  items-center">
+  <Image src="/logo.svg" alt="logo" width={40} height={40} />
+  <h1 className="text-lg sm:text-xl lg:text-2xl font-medium ml-2">Comforty</h1>
+</div>
+<div className="hidden lg:flex bg-white p-2 rounded shadow-sm">
+  <CiShoppingCart className="text-2xl" />
+  <h1 className="px-2">Cart</h1>
+  <p className="h-6 w-6 flex items-center justify-center bg-[#007580] text-white text-sm rounded-full">
+    2
+  </p>
+</div>
+
+</div>
+
+<Sheet >
   <SheetTrigger className="lg:hidden">
-    <div className='ml-[400px] '>
+    <div className='ml-[150px] '>
   <FiMenu className="text-2xl lg:hidden " />
-  </div>
+  </div>  
     </SheetTrigger>
   <SheetContent>
     <SheetHeader >
@@ -78,6 +82,9 @@ const Header = () => {
   <SheetTitle />
   <SheetDescription />
 </Sheet>
+      </div>
+
+  
 
 
       {/* Bottom header */}

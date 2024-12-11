@@ -7,7 +7,8 @@ import Produtcs from "./components/Produtcs";
 import Frame from "./components/Frame";
 export default function Home() {
   return (
-    <div>
+    <div> 
+
 <Hero />
 <Chairset />
 <Categoys />
