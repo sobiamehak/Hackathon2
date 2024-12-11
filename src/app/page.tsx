@@ -8,7 +8,6 @@ import Frame from "./components/Frame";
 export default function Home() {
   return (
     <div>
-  hn footer ko bad me sai krty phele isko sai krty kis line me issue hy ok
 <Hero />
 <Chairset />
 <Categoys />
