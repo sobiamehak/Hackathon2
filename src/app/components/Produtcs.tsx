@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <div>
       {/* Card section 1 */}
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="font-semibold text-[#272343] text-lg sm:text-xl lg:text-2xl md:pl-20 lg:pl-80">Featured Products</h1>
         <div className="flex flex-col md:flex-row flex-wrap justify-start items-center w-full p-4 gap-4 lg:gap-6">
           {/* chair1 */}

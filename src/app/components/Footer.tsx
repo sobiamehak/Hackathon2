@@ -5,22 +5,22 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <div className="w-full">
+    <div className="">
       <hr className="mt-20" />
       <div className="text-gray-600 body-font">  <div className="container px-4 sm:px-8 md:px-12 py-24 mx-auto">
-          <div className="flex flex-wrap text-center md:text-left -mb-10 -mx-4">    
+          <div className="flex flex-wrap text-center md:text-left -mb-10 ">    
             {/* Logo and Description */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-10">
-   <div className="flex justify-center md:justify-start">  <Image src="/logo.svg" alt="logo" width={40} height={40} />
+            <div className="lg:w-1/4 md:w-1/2  px-4 mb-10">
+   <div className="flex justify-center md:justify-start ">  <Image src="/logo.svg" alt="logo" width={40} height={40} />
                 <h1 className="font-medium text-2xl pb-2 pl-2">Comforty</h1>
     </div>
               <p className="text-sm md:text-base">    Vivamus tristique odio sit amet velit semper, eu posuere turpis interdum. Cras egestas purus.
               </p>
-              <Image src="/Social Links.svg" alt="social links" width={206} height={38} />
+              <Image src="/Social Links.svg" alt="social links" width={206} height={38} className='mt-4' />
             </div>
 
             {/* Categories */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-10">
+            <div className="lg:w-1/4 md:w-1/2 w-full  mb-10">
               <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
               <nav className="list-none">
                 <li>Sofa</li>
@@ -33,8 +33,8 @@ const Footer = () => {
             </div>
 
             {/* Support */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-10">
-              <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">SUPPORT</h2>
+            <div className="lg:w-1/4 md:w-1/2 w-full  mb-10  ">
+              <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3 ">SUPPORT</h2>
               <nav className="list-none">
                 <li><a className="text-gray-600 hover:text-gray-800">Help & Support</a></li>
                 <li><a className="text-gray-600 hover:text-gray-800">Terms & Conditions</a></li>
@@ -44,16 +44,15 @@ const Footer = () => {
             </div>
 
             {/* Newsletter */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-10">
+            <div className="lg:w-1/4 md:w-1/2 w-full  mb-10">
               <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">NEWSLETTER</h2>
               <div className="flex justify-center md:justify-start">
                 <input
                   type="text"
-                  placeholder="Your email"
-                  className="border border-gray-400 rounded px-4 py-2 w-full sm:w-[240px]"
+                  className="border border-gray-400 rounded px-4 py-2 w-full sm:w-[190px] mr-2 "
                 />
-                <button className="border ml-4 w-[127px] h-[36px] text-white bg-[#029FAE] rounded font-sm px-2">
-                  Subscribe
+                <button className="border  pl-4 w-[127px] h-[36px] text-white bg-[#029FAE] rounded font-sm px-2">
+                  Subscr
                 </button>
               </div>
               <p className="text-xs md:text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim.</p>
@@ -61,7 +60,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr />
         
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center px-4 sm:px-8 py-4">

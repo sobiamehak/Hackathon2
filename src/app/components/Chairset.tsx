@@ -7,7 +7,7 @@ import { CiShoppingCart } from 'react-icons/ci'
 
 const Chairset = () => {
   return (
-    <div className='w-full px-4 sm:px-8 md:px-12'>
+    <div className='w-full px-4 sm:px-8 md:px-12 overflow-hidden'>
       {/* Logos Section */}
       <div className="flex flex-wrap justify-between items-center mt-8">
         <Image src="/Logo1.svg" alt="logo 1" width={100} height={90} />

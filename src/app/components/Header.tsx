@@ -21,7 +21,7 @@ import {
 
 const Header = () => {
   return (
-    <div className="w-full "> 
+    <div className="w-full  "> 
       {/* Top header */}
       <div className="flex bg-[#272343] max-w-screen-xl mx-auto text-white justify-between items-center px-4 py-2 sm:px-6 md:px-10">
         <h1 className="text-xs sm:text-sm lg:text-base">Free shipping on all orders over $50</h1>
