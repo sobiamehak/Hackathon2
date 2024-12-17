@@ -51,8 +51,8 @@ const Footer = () => {
                   type="text"
                   className="border border-gray-400 rounded px-4 py-2 w-full sm:w-[190px] mr-2 "
                 />
-                <button className="border  pl-4 w-[127px] h-[36px] text-white bg-[#029FAE] rounded font-sm px-2">
-                  Subscr
+                <button className="border  pl-2 w-[84px] h-[36px] text-white bg-[#029FAE] rounded font-sm px-2">
+                  Subscribe
                 </button>
               </div>
               <p className="text-xs md:text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim.</p>

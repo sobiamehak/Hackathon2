@@ -1,8 +1,10 @@
 
 import React from 'react';
+import { BiCheckCircle } from 'react-icons/bi';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { GrTrophy } from 'react-icons/gr';
 import { IoLocationSharp } from 'react-icons/io5';
-import { MdAccessTimeFilled } from 'react-icons/md';
+import { MdAccessTimeFilled, MdOutlineSupportAgent } from 'react-icons/md';
 
 const Contact = () => {
   return (
@@ -106,6 +108,39 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <div className=' h-[270px] bg-[#F0F2F3] flex justify-center items-center  '>
+<div className='flex justify-center items-center gap-10 flex-col lg:flex-row'>
+  <div className='flex items-center space-x-2'>
+  <GrTrophy className='text-4xl ' />
+  <div>
+    <h1 className='font-semibold text-xl'> High Quality</h1>
+    
+    <p className='text-sm text-gray-400'> crafted from top materials</p>
+    </div>
+    </div>
+
+    <div className='flex items-center space-x-2'>
+    <BiCheckCircle  className='text-4xl'/>
+    <div>
+    <h1 className='font-semibold text-xl' >Warranty Protection </h1>
+    <p className='text-sm text-gray-400'> Over 2 years</p>
+    </div>
+    </div>
+    <div className='flex items-center space-x-2'>
+    <MdOutlineSupportAgent className='text-[50px]' />
+    <div>
+    <h1 className='font-semibold text-xl'>24 / 7 Support </h1>
+    <p className='text-sm text-gray-400'> Dedicated support</p>
+    </div>
+</div>
+</div>
+
+
+ 
+ </div>
+
+     
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Chairset from "./components/Chairset";
 import Categoys from "./components/Categoys";
 import Produtcs from "./components/Produtcs";
 import Frame from "./components/Frame";
+import Faqs from "./components/Faqs";
 export default function Home() {
   return (
     <div> 
@@ -14,6 +15,7 @@ export default function Home() {
 <Categoys />
 <Frame />
 <Produtcs />
+<Faqs />
     </div>
   );
 }

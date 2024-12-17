@@ -58,7 +58,7 @@ const Header = () => {
 <Sheet >
   <SheetTrigger className="lg:hidden">
     <div className='ml-[150px] '>
-  <FiMenu className="text-2xl lg:hidden " />
+  <FiMenu className="text-2xl lg:hidden ml-auto" />
   </div>  
     </SheetTrigger>
   <SheetContent className='bg-white'>
@@ -72,6 +72,7 @@ const Header = () => {
           <li> <Link href="/product"> Product</Link>
            </li>
            <br />
+          <li><Link href="/contact">Contact</Link></li>
           <li><Link href="/contact">Contact</Link></li>
           <br />
           <li>About</li>
@@ -90,12 +91,13 @@ const Header = () => {
       {/* Bottom header */}
       <div className="md:block hidden bg-white lg:flex flex-wrap justify-between items-center px-4 py-3 sm:px-6 md:px-10">
         <ul className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm lg:text-base">
-          <li>Home</li>
+        <li><Link href="/" >Home</Link></li>
           <li><Link href="/allproducts" >Shop</Link></li>
           <li> <Link href="/product"> Product</Link>
            </li>
           <li><Link href="/contact">Contact</Link></li>
-          <li>About</li>
+          <li><Link href="/about" >About</Link></li>
+          
         </ul>
         <h1 className="text-xs sm:text-sm lg:text-base">Contact: (808) 555-0111</h1>
       </div>
