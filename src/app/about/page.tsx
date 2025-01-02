@@ -64,9 +64,9 @@ elevate your comfort. Specializing in <br /> ergonomic design, premium materials
       {/* our products */}
 
 
-
 <h1 className='font-bold text-xl text-center md:text-start'>Our Popular Products</h1>
 <div className='flex flex-col gap-10 lg:gap-4 justify-center items-center mx-10 '>
+  
     <div>
         <Image src="/about1.jpg" alt="" width={600} height={400} className='object-cover w-[600px] h-[373px]'/>
         <p>The Poplar suede sofa <br /> $99.00</p>

@@ -4,7 +4,7 @@ import { FaPlus } from 'react-icons/fa'
 const Faqs = () => {
   return (
     <div>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font ">
   <div className="container px-5 py-24 mx-auto">
     <div className="text-center mb-20">
       <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
@@ -17,9 +17,9 @@ const Faqs = () => {
     </div>
     </section>
 
-    <div className='grid grid-cols-1 md:grid-cols-2'>
+    <div className='grid grid-cols-1 md:grid-cols-2 place-items-center'>
 {/* div1 */}
-    <div className='bg-[#F7F7F7] w-[460px] h-[170px] rounded px-4 mb-4'>
+    <div className='bg-[#F7F7F7] w-[440px] h-[170px] rounded px-4 mb-4'>
       <div className=' flex py-4 gap-[140px]'>
       <h1 className='font-bold text-[16px]  '>What types of chairs do you offer?</h1>
       <FaPlus className=' text-[#333333] '  />
@@ -32,7 +32,7 @@ const Faqs = () => {
     
      {/* div2 */}
      
-    <div className='bg-[#F7F7F7] w-[460px] h-[170px] rounded px-4 mb-4'>
+    <div className='bg-[#F7F7F7] w-[440px] h-[170px] rounded px-4 mb-4'>
       <div className=' flex py-4 gap-[140px]'>
       <h1 className='font-bold text-[16px]  '>What types of chairs do you offer?</h1>
       <FaPlus className=' text-[#333333] '  />
@@ -46,7 +46,7 @@ const Faqs = () => {
     {/* div3 */}
 
     
-    <div className='bg-[#F7F7F7] w-[460px] h-[170px] rounded px-4 mb-4'>
+    <div className='bg-[#F7F7F7] w-[440px] h-[170px] rounded px-4 mb-4'>
       <div className=' flex py-4 gap-[140px]'>
       <h1 className='font-bold text-[16px]  '>What types of chairs do you offer?</h1>
       <FaPlus className=' text-[#333333] '  />
@@ -60,7 +60,7 @@ const Faqs = () => {
     {/* div4 */}
 
     
-    <div className='bg-[#F7F7F7] w-[460px] h-[170px] rounded px-4'>
+    <div className='bg-[#F7F7F7] w-[440px] h-[170px] rounded px-4'>
       <div className=' flex py-4 gap-[140px]'>
       <h1 className='font-bold text-[16px]  '>What types of chairs do you offer?</h1>
       <FaPlus className=' text-[#333333] '  />
@@ -74,7 +74,7 @@ const Faqs = () => {
     {/* div5 */}
 
     
-    <div className='bg-[#F7F7F7] w-[460px] h-[170px] rounded px-4'>
+    <div className='bg-[#F7F7F7] w-[440px] h-[170px] rounded px-4'>
       <div className=' flex py-4 gap-[140px]'>
       <h1 className='font-bold text-[16px]  '>What types of chairs do you offer?</h1>
       <FaPlus className=' text-[#333333] '  />
@@ -88,7 +88,7 @@ const Faqs = () => {
     {/* div6 */}
 
     
-    <div className='bg-[#F7F7F7] w-[460px] h-[170px] rounded px-4'>
+    <div className='bg-[#F7F7F7] w-[440px] h-[170px] rounded px-4'>
       <div className=' flex py-4 gap-[140px]'>
       <h1 className='font-bold text-[16px]  '>What types of chairs do you offer?</h1>
       <FaPlus className=' text-[#333333] '  />
