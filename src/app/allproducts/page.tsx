@@ -1,148 +1,69 @@
-import React from 'react'
-import Image from 'next/image'
-import { CiShoppingCart } from 'react-icons/ci'
 
-const Produtsall = () => {
+
+
+"use client";  // Ensures this component runs on the client-side only
+import React, { useEffect, useState } from 'react';
+import ProductCard from '../../app/components/productCard';
+import Image from 'next/image';
+
+interface Product {
+  _id: string;
+  title: string;
+  price: number;
+  imageUrl: string;
+}
+
+const Chairset = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("/api/product");
+        const data = await res.json();
+        setProducts(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
-    <div>
-      
+    <div className="w-full px-4 sm:px-8 md:px-12 overflow-hidden">
+     
 
-     {/* Card Section */}
-     <div className="mt-8 mx-20 ">
-        <h1 className="font-semibold text-[#272343] text-center sm:text-left text-3xl">
+      {/* Card Section */}
+      <div className="mt-8">
+        <h1 className="font-semibold text-[#272343] text-center sm:text-left">
           All Products
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-          {/* Chair 1 */}
-          <div className="h-[377px] w-full max-w-[312px] mx-auto">
-            <Image src="/Image1.svg" alt="Library Stool Chair" height={312} width={312} />
-            <h1 className="flex text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#007580] text-white" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
+
+        {/* Loading State */}
+        {loading ? (
+          <p className="col-span-full text-center text-xl">Loading products...</p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6 mt-4">
+            {/* Limit to the first 4 products */}
+            {products.slice(0, 12).map((product) => (
+              <ProductCard
+                key={product._id}
+                _id={product._id}
+                title={product.title}
+                price={product.price}
+                imageUrl={product.imageUrl}
+              />
+            ))}
           </div>
-          {/* Chair 2 */}
-          <div className="h-[377px] w-full max-w-[312px] mx-auto">
-            <Image src="/Image2.svg" alt="Chair 2" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-            Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* Chair 3 */}
-          <div className="h-[377px] w-full max-w-[312px] mx-auto">
-            <Image src="/Image3.svg" alt="Library Stool Chair" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* Chair 4 */}
-          <div className="h-[377px] w-full max-w-[312px] mx-auto">
-            <Image src="/Image4.svg" alt="Library Stool Chair" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-        </div>
+        )}
       </div>
-      
-      
-      {/* Card section 2 */}
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-start items-center w-full p-4 gap-4 lg:gap-6">
-          {/* chair5 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image5.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#007580] text-white" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* chair6 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/Image6.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-            Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded
-               bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            Library Stool Chair
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* chair7 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image7.png" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* chair8 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image8.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          </div>
-</div>
 
-
-      {/* Card section 3 */}
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-start items-center w-full p-4 gap-4 lg:gap-6">
-          {/* chair9 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image5.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#007580] text-white" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* chair10 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/Image6.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-            Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded
-               bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            Library Stool Chair
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* chair11 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image7.png" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div>
-          {/* chair12 */}
-          <div className="h-[377px] w-full sm:w-[48%] md:w-[48%] lg:w-[23%]">
-            <Image src="/image8.svg" alt="" height={312} width={312} />
-            <h1 className="flex text-black hover:text-[#007580] pt-4 pl-4">
-              Library Stool Chair
-              <CiShoppingCart className="text-3xl ml-auto h-[44px] w-[44px] rounded bg-[#F0F2F3] text-black hover:bg-[#007580]" />
-            </h1>
-            <h2 className="font-semibold pl-4">$20</h2>
-          </div> 
-          </div>
-          </div>
-
+     
+    
       {/* bottom section */}
 
 <div className="w-full pb-10 bg-[#F0F2F3]">
@@ -160,7 +81,7 @@ const Produtsall = () => {
   </div>
 
   {/* Image div */}
-  <div className="flex flex-wrap gap-4 justify-center">
+  <div className="flex flex-wrap gap-4 justify-center ">
     <div className="w-[186px] h-[186px]">
       <Image src="/Image1.svg" alt="chair" width={186} height={186} />
     </div>
@@ -176,21 +97,20 @@ const Produtsall = () => {
     <div className="w-[186px] h-[186px]">
       <Image src="/image5.svg" alt="chair" width={186} height={186} />
     </div>
-    <div className="w-[186px] h-[186px]">
+    {/* <div className="w-[186px] h-[186px]">
       <Image src="/Image6.svg" alt="chair" width={186} height={186} />
-    </div>
+    </div> */}
   </div>
-</div>
-
-
+  </div>
     </div>
+  );
+};
+
+export default Chairset;
 
 
 
 
 
 
-  )
-}
 
-export default Produtsall
