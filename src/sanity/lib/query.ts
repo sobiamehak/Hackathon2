@@ -1,19 +1,31 @@
-import { defineQuery } from "next-sanity";
+import {  groq } from "next-sanity";
 
-export const allproduct = defineQuery(`
-     *[_type == "product"] {
+// export const allproduct = groq `
+//      *[_type == "products"] 
+//      `;
+
+export const allproduct = groq`
+ *[_type == "products"][0..7]{
     _id,
-    title,
-    price,
-    priceWithoutDiscount,
-    category-> {
-      _id,
-      title
-    },
-    tags,
-    badge,
-    imageUrl,
-    description,
-    inventory
-  }
-`)
+            title,
+            "imageUrl": image.asset->url,
+             products,
+             price,
+             description,
+             slug
+}
+     
+`;
+
+     
+  export   const  fourpro = groq ` *[_type == "products"][0..3]
+  {
+    _id,
+            title,
+            "imageUrl": image.asset->url,
+             products,
+             price,
+             description,
+             slug
+}
+     `

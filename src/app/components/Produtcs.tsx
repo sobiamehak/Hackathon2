@@ -11,7 +11,9 @@ interface Product {
   _id: string;
   title: string;
   price: number;
-  imageUrl: string;
+  image: string;
+  
+  
 }
 
 const Chairset = () => {
@@ -56,8 +58,8 @@ const Chairset = () => {
                 _id={product._id}
                 title={product.title}
                 price={product.price}
-                imageUrl={product.imageUrl}
-              />
+                imageUrl={product.image}
+                  />
             ))}
           </div>
         )}

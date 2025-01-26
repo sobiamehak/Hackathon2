@@ -6,11 +6,14 @@ import React from 'react';
 import Image from 'next/image';
 import { CiShoppingCart } from 'react-icons/ci';
 
+
  export interface ProductCardProps {
   _id: string;
   title: string;
   price: number;
   imageUrl: string;
+  // slug: string
+  
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ _id, title, price, imageUrl }) => {
@@ -27,7 +30,5 @@ const ProductCard: React.FC<ProductCardProps> = ({ _id, title, price, imageUrl }
 };
 
 export default ProductCard;
-
-
 
 
