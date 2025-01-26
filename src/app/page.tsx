@@ -7,8 +7,7 @@ import Frame from "./components/Frame";
 import Faqs from "./components/Faqs";
 import Allproducts from "./components/Allproducts";
 
-
-
+ 
 
 
 export default async function Home() {

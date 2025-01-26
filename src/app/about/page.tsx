@@ -20,7 +20,7 @@ elevate your comfort. Specializing in <br /> ergonomic design, premium materials
 
       {/* right div */}
 
-      <div className='max-w-[400px] h-[350px]'>
+      <div className='max-w-[400px] h-[350px] '>
 <Image src="/Image1.svg" alt="stool" width={520} height={350} />
       </div>
       </div>
@@ -64,13 +64,14 @@ elevate your comfort. Specializing in <br /> ergonomic design, premium materials
       {/* our products */}
 
 
-<h1 className='font-bold text-xl text-center md:text-start'>Our Popular Products</h1>
-<div className='flex flex-col gap-10 lg:gap-4 justify-center items-center mx-10 '>
+<h1 className='font-bold text-2xl text-center md:text-start m-4'>Our Popular Products</h1>
+<div className='flex flex-col gap-10 lg:gap-4 justify-center items-center mx-10  '>
   
     <div>
         <Image src="/about1.jpg" alt="" width={600} height={400} className='object-cover w-[600px] h-[373px]'/>
         <p>The Poplar suede sofa <br /> $99.00</p>
     </div>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
     <div>
         <Image src="/about2.jpg" alt="" width={300} height={200} className='object-cover
          w-[250px] h-[373px]'/>
@@ -83,6 +84,7 @@ elevate your comfort. Specializing in <br /> ergonomic design, premium materials
         object-cover w-[250px] h-[373px]'/>
         <p>The Dandy chair <br />
         $99.00</p>
+    </div>
     </div>
 </div>
     </div>
