@@ -86,7 +86,7 @@ elevate your comfort. Specializing in <br /> ergonomic design, premium materials
         $99.00</p>
     </div>
     </div>
-</div>
+</div> 
     </div>
   )
 }

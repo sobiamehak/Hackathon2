@@ -55,7 +55,7 @@ const Frame = () => {
       </div>
 
       {/* Right div - Gallery images fetched from Sanity */}
-      <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 sm:grid-cols-1 lg:grid-cols-2 ml-2">
+      <div className="w-full md:w-1/2 grid grid-cols-1 gap-2 sm:grid-cols-1 lg:grid-cols-2 ml-2">
         {loading ? (
           <p>Loading gallery images...</p>
         ) : (

@@ -32,3 +32,4 @@ cart.push({
   export const getItem =() : Product[] =>{
     return JSON.parse(localStorage.getItem('cart') || '[]')
   }
+

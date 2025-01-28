@@ -37,7 +37,7 @@ const Chairset = () => {
     // toast.success(`${product.title} added to cart`, {
     //   position: 'top-right',
     //   autoClose: 3000, // Optional: how long the toast stays visible
-    
+
     // }); 
     Swal.fire({
       icon: 'success',

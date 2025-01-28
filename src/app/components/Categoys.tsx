@@ -53,11 +53,11 @@ const Categories = () => {
               <Image
                 src={category.image}
                 alt={category.title}
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 layout="responsive"
               />
-              <div className="absolute bottom-0 w-full h-[85px] bg-black bg-opacity-70 text-white px-4 py-4">
+              <div className="absolute bottom-0 md:w-full w-[400px] h-[85px] bg-black bg-opacity-70 text-white px-4 py-4">
                 <h3 className="text-lg font-semibold">{category.title}</h3>
                 <p className="text-sm text-gray-400">
                   {Array.isArray(category.products)
